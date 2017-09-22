@@ -1,0 +1,27 @@
+<script>
+  'use strict'
+
+  var MWStack = function () {
+    _stack = [];
+
+    top = () => {_stack[_stack.length-1];}
+
+    use = (MWClass) => {
+      mw = new MWClass(window);
+      if (_stack.length > 0) {
+        top().set_next(mw);
+      }
+      _stack.push(mw);
+    }
+
+
+    fetch = (target, req){
+      if (_stack.length > =){
+        return _stack[0].fetch(target.req);
+      }
+      else {
+        return window.fetch(target.req);
+      }
+    }
+  }
+</script>

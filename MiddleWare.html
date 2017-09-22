@@ -1,0 +1,26 @@
+<script>
+  'use strict'
+
+  class MiddleWare extends HTMLElement {
+    constructor() {
+      super();
+    }
+
+    transform_request(target, req) {
+      return req;
+    }
+
+    transform_response(res) {
+      return res;
+    }
+
+    set_next(mw){
+      this.next = mw;
+    }
+
+    fetch(target, req){
+      return next.fetch(this.transform_request(target, req)).then(transform_response(response));
+    }
+  }
+
+</script>

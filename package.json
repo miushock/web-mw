@@ -1,0 +1,20 @@
+{
+  "name": "web-mw",
+  "version": "0.0.1",
+  "description": "fetch based middleware for front end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository" :{
+    "type" : "git",
+    "url" : "https://github.com/miushock/web-mw.git"
+  },
+  "author": "Jin Xiao",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.4",
+    "http-server": "^0.10.0",
+    "koa": "^2.3.0"
+  }
+}

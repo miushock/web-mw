@@ -1,0 +1,14 @@
+<link rel="import" href="./MiddleWare.html">
+<script>
+  class UselessMiddleWare extends MiddleWare{
+    constructor(){
+      super();
+    }
+
+    transform_response(res){
+      return "Uselessly "+ res;
+    }
+  }
+
+  window.customElements.define('middleware-useless', UselessMiddleWare);
+</script>

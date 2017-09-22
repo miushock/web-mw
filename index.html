@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="import" href="UselessMiddleWare.html">
+
+  </head>
+  <body>
+    <script>
+      var umw = document.createElement("middleware-useless");
+      umw.id = "umw";
+      umw.set_next(window);
+      document.body.appendChild(umw);
+      var result = document.createElement("div");
+      document.getElementById('umw').fetch('echo', {})
+      .then(function(res){
+        result.innerHTML = res;
+        document.body.appendChild(result);
+      });
+    </script>
+  </body>
+</html>
