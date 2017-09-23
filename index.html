@@ -6,12 +6,14 @@
   </head>
   <body>
     <script>
+
+
       var umw = document.createElement("middleware-useless");
       umw.id = "umw";
       umw.set_next(window);
       document.body.appendChild(umw);
       var result = document.createElement("div");
-      document.getElementById('umw').fetch('echo', {})
+      document.getElementById('umw').fetch('http://127.0.0.1:8888/helloworld', {})
       .then(function(res){
         result.innerHTML = res;
         document.body.appendChild(result);
